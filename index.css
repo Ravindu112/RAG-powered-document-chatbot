@@ -1,0 +1,49 @@
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --bg:           #0B1120;
+  --surface:      #111827;
+  --card:         #1E293B;
+  --border:       #2D3748;
+  --accent:       #818CF8;
+  --accent-dark:  #4F46E5;
+  --accent-glow:  rgba(129, 140, 248, 0.15);
+  --text:         #F1F5F9;
+  --text-muted:   #94A3B8;
+  --success:      #34D399;
+  --error:        #F87171;
+  --user-bubble:  #1E3A5F;
+  --ai-bubble:    #1E293B;
+
+  --font-display: 'Space Grotesk', system-ui, sans-serif;
+  --font-body:    'Inter', system-ui, sans-serif;
+  --font-mono:    'JetBrains Mono', monospace;
+}
+
+html, body, #root {
+  height: 100%;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-body);
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
+
+/* Pipeline step animation */
+@keyframes pulse-glow {
+  0%, 100% { opacity: 0.6; }
+  50% { opacity: 1; }
+}
+
+@keyframes slide-in {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.message-enter {
+  animation: slide-in 0.2s ease forwards;
+}
