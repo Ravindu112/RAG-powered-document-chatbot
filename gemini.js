@@ -6,13 +6,12 @@
 //
 // Generation: Groq (free, works worldwide, OpenAI-compatible API).
 
-const GROQ_KEY = import.meta.env.VITE_GROQ_API_KEY
-const GROQ_BASE = 'https://api.groq.com/openai/v1'
-const GROQ_MODEL = 'openai/gpt-oss-20b'
-
-// ─── TF-IDF Embeddings ───────────────────────────────────────────────────────
-// Global state: fitted after embedBatch() is called on the document corpus.
-let _vocab = null
+const GROQ_KEY = 
+const GROQ_BASE = 
+const GROQ_MODEL =
+  // ─── TF-IDF Embeddings ───────────────────────────────────────────────────────
+  // Global state: fitted after embedBatch() is called on the document corpus.
+  let _vocab = null
 let _idf = null
 
 function tokenize(text) {
